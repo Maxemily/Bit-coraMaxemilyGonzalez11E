@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora Maxémily Gonz</title>
+    
+    <link rel="icon" href="imagenes.jpg" type="image/jpeg">
+
     <style>
         html, body {
             height: 100%;
@@ -53,34 +56,32 @@
             background-color: rgb(192, 149, 234);
         }
         /* Estilo para que el video y el iframe se vean elegantes */
-    video, iframe {
-    border-radius: 12px;
-    border: 2px solid #d3bde9; /* Un borde morado claro para combinar */
-    margin-top: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-    .contenedor-video {
-    position: relative;
-    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-    height: 0;
-    overflow: hidden;
-}
-
-    .contenedor-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-        footer img {
-        transition: transform 0.3s ease; 
-        cursor: pointer; 
+        video, iframe {
+            border-radius: 12px;
+            border: 2px solid #d3bde9; 
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        footer img:hover {
-        transform: scale(1.2); 
+        .contenedor-video {
+            position: relative;
+            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .contenedor-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        footer img {
+            transition: transform 0.3s ease; 
+            cursor: pointer; 
+            will-change: transform; /* Optimiza la aceleración por hardware para la animación */
         }
 
         h1 {
@@ -95,35 +96,47 @@
             0%, 100% { text-shadow: 0 0 10px #7a28cb; transform: scale(1); }
             50% { text-shadow: 0 0 25px #b794f4, 0 0 45px #7a28cb; transform: scale(1.02); color: #fff; }
         }
-        
-        
     </style>
 </head>
 <body>
     <header>
         <h1>Bitácora Segunda y Tercera unidad</h1>
     </header>
+    
     <main>
         <h4>Contenido Pagina WEB</h4>
-    <div class="semana">
-        <h2>Semana 1: Introducción a HTML</h2>
-        <p>En esta semana aprendí sobre la estructura básica de una página web y cómo organizar las etiquetas principales.</p>
-        <embed src="Introducción Arduino Maxy.pdf" type="application/pdf" width="100%" height="500px" />
-        <p style="font-size: 0.8rem; margin-top: 10px;">
-    </p>
-    </div>
+        <div class="semana">
+            <h2>Semana 1: Introducción a HTML</h2>
+            <p>En esta semana aprendí sobre la estructura básica de una página web y cómo organizar las etiquetas principales.</p>
+            <embed src="Introducción Arduino Maxy.pdf" type="application/pdf" width="100%" height="500px" />
+        </div>
 
-    <div class="semana">
-    <h4>Semana 2: Mi práctica grabada</h4>
-    <video width="100%" controls>
-        <source src="circuito-final-maxy_hrOxfmHd.mp4" type="video/mp4">
-        Tu navegador no soporta la reproducción de videos.
-    </video>
-</div>
+        <div class="semana">
+            <h4>Semana 2: Mi práctica grabada</h4>
+            <video width="100%" controls>
+                <source src="circuito-final-maxy_hrOxfmHd.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
     </main>
+    
     <footer>
         <span>@itz_M4x</span>
-        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="25" width="100">
+        <img id="logo-footer" src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="25" width="100" alt="Logo Colegio Capouilliez">
     </footer>
+
+    <script>
+        const logoFooter = document.getElementById('logo-footer');
+
+        // Al pasar el mouse encima, se agranda un 15% (escala 1.15)
+        logoFooter.addEventListener('mouseenter', () => {
+            logoFooter.style.transform = 'scale(1.15)';
+        });
+
+        // Al quitar el mouse, regresa suavemente a su tamaño original
+        logoFooter.addEventListener('mouseleave', () => {
+            logoFooter.style.transform = 'scale(1)';
+        });
+    </script>
 </body>
 </html>
