@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Maxémily Gonz</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        header{
+            padding: 20px;
+            background-color: rgb(60, 22, 96);
+        }
+        main{            
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .semana {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-left: 6px solid rgb(165, 120, 208);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .semana:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(165, 120, 208, 0.2);
+        }
+
+        .semana h4 {
+            margin-top: 0;
+            color: rgb(85, 40, 127);
+        }
+        footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            border-top: 1px solid rgb(58, 34, 80);
+            background-color: rgb(192, 149, 234);
+        }
+        /* Estilo para que el video y el iframe se vean elegantes */
+    video, iframe {
+    border-radius: 12px;
+    border: 2px solid #d3bde9; /* Un borde morado claro para combinar */
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+    .contenedor-video {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+    .contenedor-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+        footer img {
+        transition: transform 0.3s ease; 
+        cursor: pointer; 
+        }
+
+        footer img:hover {
+        transform: scale(1.2); 
+        }
+
+        h1 {
+            color: #fff; 
+            text-shadow: 
+            0 0 5px #61259e,  
+            0 0 10px #d3bde9, 
+            0 0 20px #c49edf, 
+            0 0 40px #4b0082; 
+        }
+        @keyframes latido {
+            0%, 100% { text-shadow: 0 0 10px #7a28cb; transform: scale(1); }
+            50% { text-shadow: 0 0 25px #b794f4, 0 0 45px #7a28cb; transform: scale(1.02); color: #fff; }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bitácora Segunda y Tercera unidad</h1>
+    </header>
+    <main>
+        <h4>Contenido Pagina WEB</h4>
+    <div class="semana">
+        <h2>Semana 1: Introducción a HTML</h2>
+        <p>En esta semana aprendí sobre la estructura básica de una página web y cómo organizar las etiquetas principales.</p>
+        <embed src="file:///C:/Users/Alumno%20Capouilliez/Documents/Gonzalez11E/recursos/Introducci%C3%B3n%20Arduino%20Maxy.pdf" type="application/pdf" width="100%" height="500px" />
+        <p style="font-size: 0.8rem; margin-top: 10px;">
+    </p>
+    </div>
+
+    <div class="semana">
+    <h4>Semana 2: Mi práctica grabada</h4>
+    <video width="100%" controls>
+        <source src="recursos/Circuito final Maxy.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de videos.
+    </video>
+</div>
+    </main>
+    <footer>
+        <span>@itz_M4x</span>
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="25" width="100">
+    </footer>
+</body>
+</html>
